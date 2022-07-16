@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Quchbi Buddy</title>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a class="navbar-brand fw-bold text-white text-uppercase me-auto me-2" href="#">
+          <img src="/images/7.png" width="30" height="auto" alt="">
+          Quchbi Buddy
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavBar"
+          aria-controls="topNavBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle ms-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-dark"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-body">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-person-circle"></i></span>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                <span >Dashboard</span>
+              </a>
+            </li> 
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-chat"></i></span>
+                <span>My Chats</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-lock"></i></span>
+                <span>Change Password</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-chat-left-text"></i></span>
+                <span>FeedBack</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-exclamation-circle"></i></span>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Analytics
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-graph-up"></i></span>
+                <span>Bar Graphs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-table"></i></span>
+                <span>Customer Details</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Dashboard</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card bg-info text-white h-100" style="border-radius:50px;">
+              <div class="card-body py-5"><span style="font-size: 40px;">150</span><br>
+                <span style="font-size: small ;">Total Ads Generated</span></div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-danger text-white h-100" style="border-radius:50px;">
+              <div class="card-body py-5"><span style="font-size: 40px;">20</span><br>
+                <span style="font-size: small ;">Current Week Ads</span></div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-3 mb-3">
+            <div class="card bg-warning text-white h-100" style="border-radius:50px;">
+              <div class="card-body py-5"><span style="font-size: 40px;">2</span><br>
+                <span style="font-size: small ;">Handling Areas</span></div>
+              <div class="card-footer d-flex" >
+                <span style="padding-left: 30px;">
+                  View Details
+                </span>
+               
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-success text-white h-100" style="border-radius:50px;">
+              <div class="card-body py-5"><span style="font-size: 40px;">90%</span><br>
+                <span style="font-size: small ;">Performance Metrics</span></div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="card col-md-5 bg-light" style="margin:2% 2%;">
+            <div class="card-header" style="text-align: center;padding: 1%;">
+              <span style="font-size:12px;align-items:center;">Current Week Metrics</span> 
+            </div>
+            <div class="card-body" style="text-align:center;padding-bottom:0%">
+              <table
+                class="table table-striped table-info table-hover"
+                style="width: 100%;font-size: 9px;">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Total Customers</th>
+                    <th>Paid Customers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monday</td>
+                    <td>20</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Tuesday</td>
+                    <td>23</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                    <td>55</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                    <td>9</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Friday</td>
+                    <td>80</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td>12</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td>22</td>
+                    <td>0</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              </div>
+              <div class="card col-md-6 bg-light" style="margin:2% 2%;">
+                <div class="card-header" style="text-align: center;font-size:larger;margin-top: 4px;">
+                   Overall Stats
+                </div>
+                <div class="card-body" >
+              <table
+                
+                class="table  table-bordered table-hover table-primary table-striped"
+                style="width: 100%;text-align: center;">
+                <thead>
+                  <tr>
+                    <th>Ad Type</th>
+                    <th>Daily</th>
+                    <th>Weekly</th>
+                    <th>Monthly</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Total Ads</td>
+                    <td>5</td>
+                    <td>12</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>Paid Ads</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Free Ads</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>20</td>
+                  </tr>
+                </tbody>
+              
+              </table>
+              <div style="padding:5px ;background-color:cornflowerblue;">
+              <span>Top Buddy Stats  </span><i class="bi bi-bar-chart-fill" style="color: purple;"></i><span>Daily:20 </span><i class="bi bi-bar-chart-fill" style="color: green;"></i><span>Weekly:50  </span><i class="bi bi-bar-chart-fill" style="color: rgb(81, 58, 101);"></i><span>Monthly:200</span>
+            </div>
+            </div>
+              </div>
+            
+          
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> My Customer Details
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    id="example"
+                    class="table table-striped data-table"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Customer Name</th>
+                        <th>Contact Number</th>
+                        <th>Area</th>
+                        <th>City</th>
+                        <th>Plan Opted</th>
+                        <th>Ads Posted</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Rahul Kandhukuri</td>
+                        <td>8096243171</td>
+                        <td>Secundrabad</td>
+                        <td>Hyderabad</td>
+                        <td>$99</td>
+                        <td>100</td>
+                      </tr>
+                      <tr>
+                        <td>Jacob Soloman</td>
+                        <td>999999999</td>
+                        <td>near Beach</td>
+                        <td>Vizag</td>
+                        <td>$199</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Mahima</td>
+                        <td>898900891</td>
+                        <td>dharawi</td>
+                        <td>Mumbai</td>
+                        <td>$50</td>
+                        <td>80</td>
+                      </tr>
+                      <tr>
+                        <td>Ekta</td>
+                        <td>992399239</td>
+                        <td>dharavi</td>
+                        <td>Mumbai</td>
+                        <td>$200</td>
+                        <td>900</td>
+                      </tr>
+                      
+                     
+                    </tbody>
+                  
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script1.js"></script>
+  </body>
+</html>
